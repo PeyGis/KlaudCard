@@ -24,6 +24,25 @@
                     "value": null
                 }
             ]
+        },
+                {
+            "query_name": "Test Privilege Escalation Is True",
+            "query_id": "cca5-4724-92b9-289be68bd47c-c878abb4",
+            "severity": "MEDIUM",
+            "platform": "Terraform",
+            "files": [
+                {
+                    "file_name": "assets/queries/terraform/kubernetes/container_allow_privilege_escalation_is_true/test/positive.tf",
+                    "similarity_id": "063ed2389809f5f01ff420b63634700a9545c5e5130a6506568f925cdb0f8e13",
+                    "line": 11,
+                    "issue_type": "IncorrectValue",
+                    "search_key": "kubernetes_pod[test3].spec.container.allow_privilege_escalation",
+                    "search_value": "",
+                    "expected_value": "Attribute 'allow_privilege_escalation' is undefined or false",
+                    "actual_value": "Attribute 'allow_privilege_escalation' is true",
+                    "value": null
+                }
+            ]
         }
     ],
     "scan_id": "console",
